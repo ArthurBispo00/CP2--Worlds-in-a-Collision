@@ -16,7 +16,7 @@ export default function RootLayout({
       <body>
 <Cabecalho></Cabecalho>
 
-<Rodape></Rodape>
+
         {children}
       </body>
     </html>
