@@ -3,8 +3,8 @@ import Link from 'next/link';
 export default function Introducao() {
   return (
     <div className="bg-gray-100 min-h-screen p-8 font-sans">
-      <div className="max-100vh mx-auto bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-4xl font-bold mb-6 text-gray-810">
+      <div className="max-100vh mx-auto bg-white p-10 rounded-lg shadow-md">
+        <h1 className="text-4xl font-bold mb-6 text-gray-800">
           Introdução ao <em>Worlds in Collision</em>
         </h1>
         <p className="text-lg text-gray-700 mb-4 leading-relaxed">
