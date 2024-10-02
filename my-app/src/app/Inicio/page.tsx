@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Introducao() {
   return (
     <div className="bg-gray-100 min-h-screen p-8 font-sans">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+      <div className="max-100vh mx-auto bg-white p-8 rounded-lg shadow-md">
         <h1 className="text-4xl font-bold mb-6 text-gray-800">
           Introdução ao <em>Worlds in Collision</em>
         </h1>
@@ -30,9 +30,7 @@ export default function Introducao() {
           No entanto, a ciência moderna considera que as leis da física e os registros astronômicos não suportam a ideia de que o planeta Vênus tenha sido um cometa ou que eventos cósmicos dessa magnitude tenham ocorrido nos últimos milhares de anos. Ainda assim, <em>Worlds in Collision</em> permanece como um marco na pseudociência, desafiando as fronteiras do conhecimento estabelecido e inspirando tanto pesquisadores quanto entusiastas a questionar e explorar o desconhecido.
         </p>
 
-        <div className="mt-8">
-          <Link href="/" className="text-blue-500 hover:underline text-lg">Voltar para Home</Link>
-        </div>
+       
       </div>
     </div>
   );

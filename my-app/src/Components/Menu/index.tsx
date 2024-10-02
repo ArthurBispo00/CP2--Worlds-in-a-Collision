@@ -4,7 +4,7 @@ export default function Menu() {
   return (
     <nav className="bg-gray-1000 p-4">
       <div className="max-w-7xl mx-auto">
-        <ul className="flex justify-around space-x-8">
+        <ul className="flex justify-around space-x-2">
           <li>
             <Link href="/" className="text-white hover:text-blue-400 text-lg">
               Home
