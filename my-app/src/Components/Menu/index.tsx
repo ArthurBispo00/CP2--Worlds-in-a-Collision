@@ -9,6 +9,8 @@ export default function Menu() {
         <ul>
             <li> <Link href="/">Home</Link> </li>
            <li> <Link href="Artigos">Artigos</Link> </li>
+           <li> <Link href="Catastrofes">As cátastrofes de Velikovsky</Link> </li>
+
             
             
         </ul>
