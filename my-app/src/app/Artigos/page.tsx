@@ -9,8 +9,8 @@ export default function ServicoPage() {
 
   return (
     <div>
-      <h1>Serviço: {servico}</h1>
-      <p>Informações sobre o serviço {servico}.</p>
+      <h1>Mundo de Velikovsky {servico}</h1>
+      <p>Informacoes sobre Velikovsky {servico}.</p>
     </div>
   );
 }
