@@ -14,10 +14,10 @@ export default function ServicoPage() {
 
       {/* Menu de navegação com links para os diferentes IDs */}
       <nav>
-        <h2>Menu de Serviços</h2>
+        <h2>Artigos</h2>
         <ul>
           <li>
-            <Link href="/servico/1">Serviço 1</Link>
+            <Link href="/Artigos/1">Serviço 1</Link>
           </li>
           <li>
             <Link href="/servico/2">Serviço 2</Link>
