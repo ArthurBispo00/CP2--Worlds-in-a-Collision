@@ -1,4 +1,4 @@
-"use client"; // Garantir que este componente seja renderizado no lado do cliente
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -6,35 +6,35 @@ interface TimelineEvent {
   imageUrl: string;
   title: string;
   description: string;
-  time: string; // Campo para o tempo
+  time: string; 
 }
 
 export default function Home() {
   const [timelineEvents, setTimelineEvents] = useState<TimelineEvent[]>([]);
 
   useEffect(() => {
-    // Linha do Tempo com tempos centralizados e eventos alternados
+    // Linha do Tempo
     const events: TimelineEvent[] = [
       {
-        imageUrl: "/images/velikovsky/cometadesprendejupter.jpg", // Caminho local correto
+        imageUrl: "/images/velikovsky/cometadesprendejupter.jpg", 
         title: "O Cometa Se Desprende de Júpiter",
         description: "Por volta do século XV a.C., um cometa do tamanho de um planeta se desprendeu de Júpiter e causou catástrofes globais quando se aproximou da Terra.",
-        time: "1500 a.C." // Exemplo de tempo
+        time: "1500 a.C." 
       },
       {
-        imageUrl: "/images/velikovsky/cometapassapelaterraprimeiravez.jpg", // Caminho local correto
+        imageUrl: "/images/velikovsky/cometapassapelaterraprimeiravez.jpg", 
         title: "Passagem Próxima à Terra",
         description: "Ao passar perto da Terra, o cometa paralisou momentaneamente a rotação do planeta, desencadeando uma série de eventos devastadores relatados como as pragas do Egito.",
         time: "1490 a.C."
       },
       {
-        imageUrl: "/images/velikovsky/cometaretornaevaiparamarte.jpg", // Caminho local correto
+        imageUrl: "/images/velikovsky/cometaretornaevaiparamarte.jpg", 
         title: "Retorno do Cometa e Deslocamento de Marte",
         description: "Cinquenta anos depois, o cometa retornou, paralisando novamente a Terra e deslocando Marte em sua trajetória, um evento relatado como o Sol parado durante a batalha de Josué.",
         time: "1440 a.C."
       },
       {
-        imageUrl: "/images/velikovsky/Transformaemvenus.jpg", // Caminho local correto
+        imageUrl: "/images/velikovsky/Transformaemvenus.jpg", 
         title: "Transformação do Cometa em Vênus",
         description: "Após sua jornada, o cometa se estabilizou em uma órbita e se tornou o planeta Vênus, deixando um legado de eventos cataclísmicos.",
         time: "1400 a.C."

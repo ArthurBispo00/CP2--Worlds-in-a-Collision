@@ -43,7 +43,7 @@ export default function CatastrofesPage() {
   }
 
   return (
-    <main className="flex flex-col justify-center items-center text-center pt-20"> {/* Adicionei pt-20 para espaçamento */}
+    <main className="flex flex-col justify-center items-center text-center pt-20"> {}
       <article>
         <h1 className="mb-4" style={{ fontSize: '50px', fontWeight: 'bold' }}>
           Teoria de Velikovsky: Vênus e as Pragas do Egito

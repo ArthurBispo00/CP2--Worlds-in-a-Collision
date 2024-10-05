@@ -1,4 +1,4 @@
-"use client"; // Garantir que este componente seja renderizado no lado do cliente
+"use client";
 
 import { useEffect, useState } from "react";
 
