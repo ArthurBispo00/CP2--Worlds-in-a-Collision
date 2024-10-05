@@ -24,6 +24,12 @@ export default function Menu() {
             <Link href="/Catastrofes" legacyBehavior>
               <a className="text-white hover:text-blue-400 text-lg">As Catástrofes de Velikovsky</a>
             </Link>
+            
+          </li>
+          <li>
+            <Link href="/Linhadotempo" legacyBehavior>
+              <a className="text-white hover:text-blue-400 text-lg">Linha do Tempo de Velikovsky</a>
+            </Link>
           </li>
         </ul>
       </div>
