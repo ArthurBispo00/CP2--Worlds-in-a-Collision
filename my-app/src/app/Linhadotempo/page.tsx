@@ -45,34 +45,42 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center pt-20">
-      <h1 className="text-4xl font-bold mb-10">Linha do Tempo de Velikovsky</h1>
+    <main className="flex flex-col items-center pt-20">
+      <h1 className="text-5xl font-bold mb-10" aria-label="Linha do Tempo de Velikovsky">Linha do Tempo de Velikovsky</h1>
 
       {/* Linha do Tempo */}
-      <section className="w-full max-w-4xl mb-16">
+      <section className="w-full max-w-4xl mb-16" aria-labelledby="timeline-heading">
         <div className="relative">
-          <div className="absolute top-0 left-1/2 w-1 bg-gray-400 transform -translate-x-1/2 h-full"></div> {/* Linha central */}
+          <div className="absolute top-0 left-1/2 w-1 bg-gray-400 transform -translate-x-1/2 h-full" aria-hidden="true"></div> {/* Linha central */}
           <div className="space-y-16">
             {timelineEvents.map((event, index) => (
-              <div key={index} className={`relative flex items-center justify-between ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+              <article 
+                key={index} 
+                className={`relative flex items-center justify-between ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`} 
+                aria-labelledby={`event-title-${index}`}
+              >
                 {/* Exibe o tempo centralizado */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 bg-white text-gray-600 font-bold px-4 py-2 rounded-full shadow">
+                <div className="absolute left-1/2 transform -translate-x-1/2 bg-white text-gray-600 font-bold px-4 py-2 rounded-full shadow" aria-hidden="true">
                   {event.time}
                 </div>
 
                 {/* Alterna os lados da linha do tempo */}
-                <div className={`w-1/2 flex flex-col items-center space-y-4 text-center`}> {/* Centraliza o texto e a imagem */}
-                  <img src={event.imageUrl} alt={event.title} className="w-64 h-64 object-cover rounded-lg shadow-lg" />
-                  <div className="max-w-md"> {/* Texto centralizado */}
-                    <h2 className="text-2xl font-semibold">{event.title}</h2>
-                    <p className="text-lg mt-2">{event.description}</p>
+                <div className="w-1/2 flex flex-col items-center space-y-4 text-center">
+                  <img 
+                    src={event.imageUrl} 
+                    alt={`Imagem do evento: ${event.title}`} 
+                    className="w-64 h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" 
+                  />
+                  <div className="max-w-md">
+                    <h2 className="text-3xl font-semibold" id={`event-title-${index}`}>{event.title}</h2>
+                    <p className="text-lg mt-3">{event.description}</p>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

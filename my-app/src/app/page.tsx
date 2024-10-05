@@ -79,20 +79,27 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center text-center pt-20">
+    <main className="flex flex-col justify-center items-center text-center pt-20">
       <h1 className="text-4xl font-bold mb-6">Planetas Teorizados por Velikovsky</h1>
-      <div className="flex flex-col gap-6">
+      <section className="flex flex-col gap-6">
         {/* Exibe cada imagem retornada pela API */}
         {planets.map((planet, index) => (
-          <div 
+          <article 
             key={index} 
             className="cursor-pointer flex flex-col items-center space-y-4" 
             onClick={() => setSelectedPlanetIndex(selectedPlanetIndex === index ? null : index)} // Alterna a exibição
           >
-            <img src={planet.url} alt={planet.name} className="w-64 h-64 object-cover rounded-lg shadow-lg" />
+            <figure className="w-64 h-64 rounded-lg shadow-lg overflow-hidden">
+              <img 
+                src={planet.url} 
+                alt={`Imagem de ${planet.name}`} 
+                className="w-full h-full object-cover" 
+                loading="lazy" 
+              />
+            </figure>
             <div className="flex flex-col items-center">
-              <p className="text-xl font-semibold">{planet.name}</p>
-              {/* Exibe a teoria apenas se o planeta estiver selecionado */}
+              <h2 className="text-xl font-semibold">{planet.name}</h2>
+              {/* Exibe a teoria e narrativa apenas se o planeta estiver selecionado */}
               {selectedPlanetIndex === index && (
                 <>
                   <p className="text-lg text-center mt-2 max-w-md">{planet.theory}</p>
@@ -100,9 +107,9 @@ export default function Home() {
                 </>
               )}
             </div>
-          </div>
+          </article>
         ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
