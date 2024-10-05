@@ -31,6 +31,11 @@ export default function Menu() {
               <a className="text-white hover:text-blue-400 text-lg">Linha do Tempo de Velikovsky</a>
             </Link>
           </li>
+          <li>
+            <Link href="/Calculos" legacyBehavior>
+              <a className="text-white hover:text-blue-400 text-lg">Calculos cientificos de Velikovsky</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
