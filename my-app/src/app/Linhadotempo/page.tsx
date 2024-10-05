@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation'; // Hook useRouter para redirecionamento
 
 interface TimelineEvent {
   imageUrl: string;
@@ -11,6 +12,7 @@ interface TimelineEvent {
 
 export default function Home() {
   const [timelineEvents, setTimelineEvents] = useState<TimelineEvent[]>([]);
+  const router = useRouter(); // Inicializa o hook useRouter
 
   useEffect(() => {
     // Linha do Tempo
@@ -81,6 +83,14 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <button 
+        className="mt-8 text-lg font-bold text-blue-500 underline" 
+        onClick={() => router.push('/Catastrofes')} // Redireciona para o componente da página Catastrofes
+        aria-label="Confira os eventos na linha do tempo"
+      >
+        Confira agora como esses fatos se relaciona com o livro sagrado a Biblia.
+      </button>
     </main>
   );
 }
