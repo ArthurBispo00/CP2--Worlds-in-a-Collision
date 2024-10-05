@@ -65,7 +65,7 @@ export default function CatastrofesPage() {
     <main className="flex flex-col justify-center items-center text-center pt-20">
       <article>
         <h1 className="mb-4" style={{ fontSize: '50px', fontWeight: 'bold' }}>
-          Teoria de Velikovsky: Vênus e as Pragas do Egito
+        Cálculos Gravitacionais e a Teoria de Velikovsky: Influência de Vênus e Júpiter nas Catástrofes
         </h1>
         <section id="introducao">
           <p className="mb-4" style={{ fontSize: '25px' }}>
