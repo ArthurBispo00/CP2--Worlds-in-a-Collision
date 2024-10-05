@@ -2,8 +2,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest): Promise<NextResponse> {
-  const imageUrl: string = 'https://photojournal.jpl.nasa.gov/jpeg/PIA00257.jpg';
+  // Array com URLs de várias imagens da NASA
+  const imageUrls: string[] = [
+    'https://photojournal.jpl.nasa.gov/jpeg/PIA00257.jpg', // Exemplo: Imagem de Júpiter
+    'https://photojournal.jpl.nasa.gov/jpeg/PIA02982.jpg', // Exemplo: Imagem de Marte
+    'https://photojournal.jpl.nasa.gov/jpeg/PIA00123.jpg', // Exemplo: Imagem de Vênus
+    'https://photojournal.jpl.nasa.gov/jpeg/PIA01988.jpg', // Exemplo: Imagem de Saturno
+    'https://photojournal.jpl.nasa.gov/jpeg/PIA00331.jpg'  // Exemplo: Imagem de Mercúrio
+  ];
 
-  // Retorna a URL da imagem no formato JSON
-  return NextResponse.json({ url: imageUrl });
+  // Retorna as URLs das imagens no formato JSON
+  return NextResponse.json({ images: imageUrls });
 }
+

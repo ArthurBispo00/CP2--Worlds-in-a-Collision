@@ -15,13 +15,14 @@ export default function CatastrofesPage() {
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        // URL do seu endpoint da API que retorna a imagem
-        const res = await fetch("/api/nasa"); // Exemplo: API de Imagem da NASA
+        // Faz uma requisição para a API personalizada
+        const res = await fetch("/api/nasa"); // Chama o endpoint com múltiplas imagens
         if (!res.ok) {
           throw new Error("Falha ao buscar a imagem");
         }
-        const data: ImageData = await res.json();
-        setImageData(data);
+        const data = await res.json();
+        const firstImage = data.images[0]; // Pega apenas a primeira imagem do array
+        setImageData({ url: firstImage });
         setLoading(false);
       } catch (error: any) {
         setError(error.message || "Erro desconhecido");
