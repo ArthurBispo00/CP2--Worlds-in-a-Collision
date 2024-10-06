@@ -93,6 +93,12 @@ export default function Menu() {
               Sistema Solar
             </Link>
           </li>
+          <li className="flex items-center space-x-2">
+            <FaSun className="text-yellow-300 animate-spin-slow" />
+            <Link href="PensamentosVelikovsy" className="text-white hover:text-yellow-400 text-lg transition duration-300 ease-in-out">
+            PensamentosVelikovsy
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

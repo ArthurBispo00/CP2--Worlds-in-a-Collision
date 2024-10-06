@@ -21,22 +21,22 @@ export default function ServicoPage() {
           <h2 className="text-2xl text-yellow-300 font-semibold mb-2">Artigos sobre Astronomia</h2>
           <ul className="space-y-2">
             <li>
-              <Link href="/Artigos/1" className="text-blue-300 hover:text-blue-500 transition duration-300">Serviço 1</Link>
+              <Link href="/Artigos/1" className="text-blue-300 hover:text-blue-500 transition duration-300">Mundos em Colisão: A Teoria de Velikovsky</Link>
             </li>
             <li>
-              <Link href="/Artigos/2" className="text-blue-300 hover:text-blue-500 transition duration-300">Serviço 2</Link>
+              <Link href="/Artigos/2" className="text-blue-300 hover:text-blue-500 transition duration-300">Eventos Cataclísmicos de Vênus</Link>
             </li>
             <li>
-              <Link href="/Artigos/3" className="text-blue-300 hover:text-blue-500 transition duration-300">Serviço 3</Link>
+              <Link href="/Artigos/3" className="text-blue-300 hover:text-blue-500 transition duration-300">Comparação com Mitologias Antigas</Link>
             </li>
             <li>
-              <Link href="/Artigos/4" className="text-blue-300 hover:text-blue-500 transition duration-300">Serviço 4</Link>
+              <Link href="/Artigos/4" className="text-blue-300 hover:text-blue-500 transition duration-300">Desafios Científicos e Controvérsias</Link>
             </li>
             <li>
-              <Link href="/Artigos/5" className="text-blue-300 hover:text-blue-500 transition duration-300">Serviço 5</Link>
+              <Link href="/Artigos/5" className="text-blue-300 hover:text-blue-500 transition duration-300">Argumento sobre Amnésia Coletiva</Link>
             </li>
             <li>
-              <Link href="/Artigos/6" className="text-blue-300 hover:text-blue-500 transition duration-300">Serviço 6</Link>
+              <Link href="/Artigos/6" className="text-blue-300 hover:text-blue-500 transition duration-300">Reflexão e Discussão</Link>
             </li>
           </ul>
         </nav>
