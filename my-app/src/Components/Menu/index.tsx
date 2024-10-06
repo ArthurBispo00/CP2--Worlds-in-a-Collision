@@ -35,10 +35,10 @@ export default function Menu() {
   }, []);
 
   return (
-<nav className="bg-gradient-to-r from-black via-blue-900 to-black p-6 shadow-lg border-b-2 border-yellow-400" style={{ width: '110%', marginLeft: '-0.5cm' }}>
+<nav className="bg-gradient-to-r from-black via-blue-900 to-black p-6 shadow-lg border-b-2 border-yellow-400" style={{ width: '120%', marginLeft: '-1cm'}}>
 
      
-      <div className="mx-auto flex justify-between items-center w-full">
+      <div className="mx-auto flex justify-between items-center w-full"style={{ width: '120%', marginLeft: '3cm'}}>
         {isMobile && isOpen && (
           <div className="text-white text-lg font-bold">
             Exploração Cósmica
