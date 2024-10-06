@@ -88,17 +88,13 @@ export default function CatastrofesPage() {
           </section>
         </article>
 
-        <a 
-          href="#" 
-          className="mt-8 text-lg font-bold text-yellow-400 underline hover:text-yellow-300 transition duration-300"
-          onClick={(e) => {
-            e.preventDefault();
-            router.push('/Linhadotempo'); // Redireciona para o componente da linha do tempo
-          }}
-          aria-label="Confira os eventos na linha do tempo"
-        >
-          Confira na linha do tempo abaixo os eventos que aconteceram relacionados a essas teorias
-        </a>
+        <button 
+  className="bg-gradient-to-r from-blue-900 to-purple-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-500 transition duration-300 ease-in-out transform hover:scale-105 mt-8"
+  onClick={() => router.push('/Linhadotempo')}
+  aria-label="Confira os eventos na linha do tempo"
+>
+  Confira os eventos na linha do tempo
+</button>
       </main>
     </div>
   );

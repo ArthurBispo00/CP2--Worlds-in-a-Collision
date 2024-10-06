@@ -35,19 +35,74 @@ export default function Home() {
         <section className="text-left max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-yellow-300 mb-4">Quem foi Immanuel Velikovsky?</h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            Immanuel Velikovsky (1895-1979) foi um pensador ousado que desafiou as noções tradicionais da ciência. 
-            Seu livro <em>Worlds in Collision</em> propôs que eventos cósmicos catastróficos moldaram a história do 
-            nosso planeta e das civilizações antigas. Suas ideias foram revolucionárias e controversas, 
-            mas continuam a intrigar estudiosos e entusiastas.
-          </p>
-          <Link href="/Artigos" className="text-yellow-400 font-bold underline hover:text-yellow-300">
-            Leia mais sobre Velikovsky
-          </Link>
+  Immanuel Velikovsky (1895-1979) foi um pensador ousado que desafiou as noções tradicionais da ciência. 
+  Seu trabalho multidisciplinar tocou áreas como astronomia, história e mitologia. Nascido em Vitebsk, 
+  na atual Bielorrússia, Velikovsky veio de uma família judaica culta e desenvolveu um forte interesse 
+  pela ciência desde jovem. Ele estudou medicina na Universidade de Moscou, onde se formou em 1921. Após 
+  a Revolução Russa, emigrou para a Alemanha e posteriormente para a Palestina, onde continuou seus 
+  estudos e fundou a revista <em>Scripta Universitatis</em> com o apoio de intelectuais da época, 
+  incluindo Albert Einstein.
+</p>
+
+<p className="text-lg text-gray-300 leading-relaxed mb-6">
+  Embora treinado em medicina e psicanálise, foi na intersecção entre ciência e história que Velikovsky 
+  realmente desafiou o status quo. Seu livro mais famoso, <em>Worlds in Collision</em> (1950), propôs 
+  que a Terra sofreu catástrofes cósmicas que moldaram a história da humanidade. Ele argumentou que o 
+  planeta Vênus foi expulso de Júpiter e passou perto da Terra, causando eventos catastróficos que estão 
+  registrados em mitos e tradições antigas, como o Êxodo bíblico e outras narrativas mitológicas.
+</p>
+
+<p className="text-lg text-gray-300 leading-relaxed mb-6">
+  Suas teorias catastrofistas sugeriam que a história geológica e cultural da Terra não foi moldada 
+  gradualmente, como muitos acreditavam, mas por eventos cósmicos repentinos. Isso incluiu grandes 
+  terremotos, tsunamis e mudanças climáticas abruptas causadas pela interação de corpos celestes. 
+  Velikovsky interpretou textos antigos, mitologias e escrituras religiosas como relatos de eventos 
+  astronômicos reais. Ele sugeriu que esses eventos influenciaram profundamente as civilizações antigas, 
+  conectando mitos de diferentes culturas a esses fenômenos cósmicos.
+</p>
+
+<p className="text-lg text-gray-300 leading-relaxed mb-6">
+  A comunidade científica da época foi extremamente crítica em relação às ideias de Velikovsky. 
+  Astrônomos, geólogos e físicos argumentaram que suas teorias sobre a origem e o movimento de Vênus 
+  não eram consistentes com o conhecimento científico estabelecido. Críticos notáveis, como o 
+  astrofísico Carl Sagan, refutaram muitas das alegações de Velikovsky, e ele foi amplamente rejeitado 
+  pelos círculos acadêmicos convencionais. No entanto, suas ideias também ganharam uma base de apoio 
+  leal entre pensadores alternativos e leitores leigos que apreciavam sua disposição de desafiar 
+  as explicações científicas tradicionais.
+</p>
+
+<p className="text-lg text-gray-300 leading-relaxed mb-6">
+  Apesar das críticas, Velikovsky continuou a desenvolver suas teorias em outros livros, como 
+  <em>Ages in Chaos</em> (1952), onde sugeriu que a cronologia da história egípcia estava incorreta e 
+  que havia uma sobreposição significativa com eventos bíblicos. Ele também escreveu <em>Earth in 
+  Upheaval</em> (1955), que argumentava que catástrofes globais moldaram a geologia da Terra. Suas 
+  teorias sobre catástrofes planetárias também foram exploradas em <em>Peoples of the Sea</em> (1977), 
+  no qual ele propôs uma nova cronologia para a história do Mediterrâneo.
+</p>
+
+<p className="text-lg text-gray-300 leading-relaxed mb-6">
+  Immanuel Velikovsky faleceu em Princeton, Nova Jersey, em 17 de novembro de 1979. Embora suas teorias 
+  nunca tenham sido aceitas pela ciência convencional, ele desempenhou um papel importante ao questionar 
+  as bases da ciência estabelecida. Seu trabalho continua a ser estudado e debatido por aqueles 
+  interessados em teorias alternativas, e ele permanece uma figura polarizadora e influente no campo da 
+  ciência popular. Seu legado reside na maneira como inspirou novas formas de pensar sobre a história, 
+  a mitologia e o papel dos eventos cósmicos no desenvolvimento da civilização humana.
+</p>
+
+<p className="text-lg text-gray-300 leading-relaxed mb-4">
+    Se você deseja se aprofundar nas teorias revolucionárias de Immanuel Velikovsky e explorar mais sobre seus artigos e contribuições para a ciência, clique no botão abaixo.
+  </p>
+  <Link href="/Artigos">
+    <button className="bg-gradient-to-r from-blue-900 to-purple-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-500 transition duration-300 ease-in-out transform hover:scale-105">
+      Leia mais sobre Velikovsky
+    </button>
+  </Link>
+
         </section>
 
-        {/* Seção de Destaques do Livro */}
+       
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center max-w-7xl mx-auto">
-          {/* Evento Cósmico */}
+       
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
             <FaSun className="text-yellow-400 text-5xl mb-4" />
             <h3 className="text-2xl font-semibold text-white mb-2">Evento Cósmico</h3>
@@ -56,7 +111,7 @@ export default function Home() {
               causou catástrofes descritas nas antigas mitologias.
             </p>
           </div>
-          {/* Impacto Global */}
+        
           <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
             <FaGlobe className="text-blue-400 text-5xl mb-4" />
             <h3 className="text-2xl font-semibold text-white mb-2">Impacto Global</h3>
