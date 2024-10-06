@@ -48,7 +48,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-col items-center pt-20">
+    <main className="flex flex-col items-center pt-20 pb-20"> {/* Adiciona padding na parte inferior */}
       <h1 className="text-5xl font-bold mb-10 text-yellow-400 tracking-wide" aria-label="Linha do Tempo de Velikovsky">
         Linha do Tempo de Velikovsky
       </h1>
@@ -90,13 +90,12 @@ export default function Home() {
       </section>
       
       <button 
-  className="bg-gradient-to-r from-blue-900 to-purple-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-500 transition duration-300 ease-in-out transform hover:scale-105 mt-8"
-  onClick={() => router.push('/Catastrofes')}
-  aria-label="Confira como esses fatos se relacionam com a Bíblia"
->
-  Confira agora como esses fatos se relacionam com o livro sagrado, a Bíblia.
-</button>
-
+        className="bg-gradient-to-r from-blue-900 to-purple-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-500 transition duration-300 ease-in-out transform hover:scale-105 mt-2 mb-3"
+        onClick={() => router.push('/Catastrofes')}
+        aria-label="Confira como esses fatos se relacionam com a Bíblia"
+      >
+        Confira agora como esses fatos se relacionam com o livro sagrado, a Bíblia.
+      </button>
     </main>
   );
 }

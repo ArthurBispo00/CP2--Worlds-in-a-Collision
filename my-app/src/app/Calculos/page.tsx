@@ -1,4 +1,4 @@
-"use client"; // Garantir que este componente seja renderizado no lado do cliente
+"use client"; 
 
 import { useState } from "react";
 import { useRouter } from 'next/navigation'; // Hook useRouter para redirecionamento
@@ -141,9 +141,15 @@ export default function CatastrofesPage() {
           {velikovskyFrase && <p className="text-lg lg:text-xl text-white mt-4">{velikovskyFrase}</p>}
         </section>
 
-        <a href="#" className="mt-8 text-lg lg:text-xl font-bold text-blue-500 underline hover:text-blue-400" onClick={(e) => { e.preventDefault(); router.push('/Linhadotempo'); }}>
-          Confira na linha do tempo abaixo os eventos que aconteceram relacionados a essas teorias
-        </a>
+        {/* Alterando a tag <a> para um botão estilizado */}
+        <div className="flex justify-center mt-8">
+          <button 
+            className="bg-gradient-to-r from-blue-900 to-purple-600 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-500 transition duration-300 ease-in-out transform hover:scale-105"
+            onClick={() => router.push('/Linhadotempo')}
+          >
+            Confira na linha do tempo abaixo os eventos que aconteceram relacionados a essas teorias
+          </button>
+        </div>
       </div>
     </main>
   );

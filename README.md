@@ -47,6 +47,8 @@
 | **Arthur Bispo de Lima**     | 557568  | 1TDSPV  | [GitHub Arthur](https://github.com/ArthurBispo00?tab=repositories) | ![Arthur Bispo](https://drive.google.com/uc?export=view&id=1qkq69PTvJU6VSS_cWNDiyknRQSCBUakg) |
 | **João Paulo Moreira**       | 557808  | 1TDSPV  | [GitHub João Paulo](https://github.com/joao1015?tab=repositories) | ![João Paulo](https://drive.google.com/uc?export=view&id=1wxoVt-5v4ifCAGZHkINnNNZuMXSqowpz) |
 | **Victor Martins Dos Santos**    |  | 1TDSPV  | [GitHub Victor Martins](https://github.com/VIctorMartins3519) | 
+tab=repositories) | ![Victor Martins](https://drive.google.com/file/d/1_lAM1FbSlqUAKfeLZ3Xp0XZtmSkeofdw/view?usp=sharing) |
+
 
 
 [🔝 Voltar ao topo](#)

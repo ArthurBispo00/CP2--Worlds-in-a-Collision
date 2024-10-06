@@ -151,7 +151,7 @@ export default function Home() {
             destruições massivas quando passou próximo da Terra. Esse evento, registrado em mitologias
             de várias culturas, foi um dos pilares de sua teoria.
           </p>
-          <Link href="/DesastreDeVenus" className="inline-block px-8 py-4 bg-yellow-400 text-black font-bold rounded-md hover:bg-yellow-300 transition duration-300 mt-4">
+          <Link href="/Catastrofes" className="inline-block px-8 py-4 bg-yellow-400 text-black font-bold rounded-md hover:bg-yellow-300 transition duration-300 mt-4">
             Saiba mais sobre o desastre
           </Link>
         </section>
