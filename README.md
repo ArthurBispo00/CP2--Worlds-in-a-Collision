@@ -38,14 +38,15 @@
 
 [Link para o repositório](https://github.com/joao1015/CP2--Worlds-in-a-Collision)
 
----
+
 
 ## <a name="equipe"></a>👥 **Equipe:**  
 
-| Nome                        | GitHub                                          | Foto                                          |
-|-----------------------------|-------------------------------------------------|-----------------------------------------------|
-| **Arthur Bispo de Lima**     | [GitHub Arthur](https://github.com/ArthurBispo00) | ![Arthur Bispo](https://drive.google.com/uc?export=view&id=1qkq69PTvJU6VSS_cWNDiyknRQSCBUakg) |
-| **João Paulo Moreira**       | [GitHub João Paulo](https://github.com/joao1015) | ![João Paulo](https://drive.google.com/uc?export=view&id=1wxoVt-5v4ifCAGZHkINnNNZuMXSqowpz) |
+| Nome                        | RM      | Turma   | GitHub                                          | Foto                                          |
+|-----------------------------|---------|---------|-------------------------------------------------|-----------------------------------------------|
+| **Arthur Bispo de Lima**     | 557568  | 1TDSPV  | [GitHub Arthur](https://github.com/ArthurBispo00?tab=repositories) | ![Arthur Bispo](https://drive.google.com/uc?export=view&id=1qkq69PTvJU6VSS_cWNDiyknRQSCBUakg) |
+| **João Paulo Moreira**       | 557808  | 1TDSPV  | [GitHub João Paulo](https://github.com/joao1015?tab=repositories) | ![João Paulo](https://drive.google.com/uc?export=view&id=1wxoVt-5v4ifCAGZHkINnNNZuMXSqowpz) |
+| **Victor Martins Dos Santos**    |  | 1TDSPV  | [GitHub Victor Martins](https://github.com/VIctorMartins3519) | 
 
 
 [🔝 Voltar ao topo](#)
