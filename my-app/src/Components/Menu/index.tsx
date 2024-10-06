@@ -89,7 +89,7 @@ export default function Menu() {
           </li>
           <li className="flex items-center space-x-2">
             <FaSun className="text-yellow-300 animate-spin-slow" />
-            <Link href="/SistemaSolar" className="text-white hover:text-yellow-400 text-lg transition duration-300 ease-in-out">
+            <Link href="SistemaSolar" className="text-white hover:text-yellow-400 text-lg transition duration-300 ease-in-out">
               Sistema Solar
             </Link>
           </li>
