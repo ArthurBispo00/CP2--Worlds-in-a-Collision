@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import { useState } from "react";
 import { useRouter } from 'next/navigation'; // Hook useRouter para redirecionamento
@@ -58,7 +58,7 @@ export default function CatastrofesPage() {
       className="relative flex flex-col justify-center items-center text-center pt-20 min-h-screen bg-cover bg-center text-white"
       style={{ backgroundImage: `url('/images/tom.jpg')` }} 
     >
-      <div className="absolute inset-0 bg-black bg-opacity-70"></div> {/* Overlay para melhorar a legibilidade do texto */}
+      <div className="absolute inset-0 bg-black bg-opacity-70" aria-hidden="true"></div> {/* Overlay para melhorar a legibilidade do texto */}
 
       <div className="relative z-10 max-w-4xl px-6">
         <article>
@@ -96,39 +96,39 @@ export default function CatastrofesPage() {
 
           <div className="mb-4">
             <label className="block mb-2 text-gray-200">Massa 1 (kg):
-              <button className="ml-2 text-blue-500">?</button>
+              <button className="ml-2 text-blue-500" aria-label="Ajuda sobre massa 1">?</button>
             </label>
             <input type="number" value={massa1} onChange={(e) => setMassa1(parseFloat(e.target.value))} className="border rounded p-2 text-black" />
           </div>
 
           <div className="mb-4">
             <label className="block mb-2 text-gray-200">Massa 2 (kg):
-              <button className="ml-2 text-blue-500">?</button>
+              <button className="ml-2 text-blue-500" aria-label="Ajuda sobre massa 2">?</button>
             </label>
             <input type="number" value={massa2} onChange={(e) => setMassa2(parseFloat(e.target.value))} className="border rounded p-2 text-black" />
           </div>
 
           <div className="mb-4">
             <label className="block mb-2 text-gray-200">Distância (m):
-              <button className="ml-2 text-blue-500">?</button>
+              <button className="ml-2 text-blue-500" aria-label="Ajuda sobre distância">?</button>
             </label>
             <input type="number" value={distancia} onChange={(e) => setDistancia(parseFloat(e.target.value))} className="border rounded p-2 text-black" />
           </div>
 
           {/* Centralização e ícones nos botões */}
           <div className="flex justify-center space-x-4 mt-6"> {/* Alinha os botões no centro */}
-            <button onClick={() => preencherValoresPlaneta("Vênus")} className="bg-green-500 text-white py-2 px-6 rounded flex items-center space-x-2 hover:bg-green-400">
+            <button onClick={() => preencherValoresPlaneta("Vênus")} className="bg-green-500 text-white py-2 px-6 rounded flex items-center space-x-2 hover:bg-green-400" aria-label="Usar valores de Vênus">
               <FaVenus /> {/* Ícone de Vênus */}
               <span>Usar valores de Vênus</span>
             </button>
-            <button onClick={() => preencherValoresPlaneta("Júpiter")} className="bg-orange-500 text-white py-2 px-6 rounded flex items-center space-x-2 hover:bg-orange-400">
+            <button onClick={() => preencherValoresPlaneta("Júpiter")} className="bg-orange-500 text-white py-2 px-6 rounded flex items-center space-x-2 hover:bg-orange-400" aria-label="Usar valores de Júpiter">
               <FaGlobe /> {/* Ícone genérico representando Júpiter */}
               <span>Usar valores de Júpiter</span>
             </button>
           </div>
 
           <div className="flex justify-center mt-6">
-            <button onClick={calcularForcaGravitacional} className="bg-blue-500 text-white py-2 px-6 rounded flex items-center space-x-2 hover:bg-blue-400">
+            <button onClick={calcularForcaGravitacional} className="bg-blue-500 text-white py-2 px-6 rounded flex items-center space-x-2 hover:bg-blue-400" aria-label="Calcular Força Gravitacional e de Maré">
               <FaRocket /> {/* Ícone de foguete para representar o cálculo */}
               <span>Calcular Força Gravitacional e de Maré</span>
             </button>
@@ -146,6 +146,7 @@ export default function CatastrofesPage() {
           <button 
             className="bg-gradient-to-r from-blue-900 to-purple-600 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-500 transition duration-300 ease-in-out transform hover:scale-105"
             onClick={() => router.push('/Linhadotempo')}
+            aria-label="Ir para linha do tempo"
           >
             Confira na linha do tempo abaixo os eventos que aconteceram relacionados a essas teorias
           </button>
@@ -154,3 +155,4 @@ export default function CatastrofesPage() {
     </main>
   );
 }
+
