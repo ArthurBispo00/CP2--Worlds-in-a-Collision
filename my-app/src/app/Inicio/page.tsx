@@ -1,36 +1,61 @@
 import Link from 'next/link';
+import { FaRocket } from 'react-icons/fa'; // Importando o ícone de foguete
 
 export default function Introducao() {
   return (
-    <div className="bg-gray-100 min-h-screen p-8 font-sans">
-      <div className="max-100vh mx-auto bg-white p-10 rounded-lg shadow-md">
-        <h1 className="text-4xl font-bold mb-6 text-gray-800">
-          Introdução ao <em>Worlds in Collision</em>
-        </h1>
-        <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          <em>Worlds in Collision</em>, publicado em 1950 por Immanuel Velikovsky, é uma obra que abalou o mundo acadêmico ao propor que eventos cosmológicos catastróficos moldaram a história do planeta Terra. Velikovsky argumenta que o planeta Vênus foi originalmente um cometa, expulso de Júpiter, e que sua trajetória trouxe caos à Terra. Ele sustenta que as mitologias antigas de várias culturas ao redor do mundo — incluindo Egito, Israel, Grécia, China e México — são, na verdade, relatos codificados de encontros cósmicos violentos.
-        </p>
-        <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          De acordo com Velikovsky, esses eventos causaram perturbações gravíssimas no meio ambiente da Terra, como terremotos, alterações no clima e até mesmo as pragas do Êxodo bíblico. Ele usa lendas e textos religiosos antigos para construir seu argumento, desafiando muitas das teorias estabelecidas da astronomia e da história. O livro causou um impacto significativo, gerando tanto fascínio quanto críticas ferozes por parte da comunidade científica.
-        </p>
-        <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          Velikovsky, contrariando os princípios da física newtoniana, sugeriu que o comportamento planetário nos últimos milênios não segue as leis hoje conhecidas, mas sim uma história de encontros catastróficos que influenciaram tanto o sistema solar quanto a evolução da civilização humana. Essa proposta foi altamente criticada, mas o autor alega que os mitos e histórias de culturas antigas não devem ser descartados como simples alegorias, e sim tratados como evidências de um passado astronômico turbulento.
-        </p>
-        <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          Apesar de ser amplamente desacreditado por cientistas, o livro continua a gerar debates sobre os limites da ciência convencional e a interpretação de eventos mitológicos como fatos históricos. Velikovsky traz uma abordagem multidisciplinar que combina mitologia, história, geologia e astronomia de uma maneira ousada e controversa, propondo uma "amnésia coletiva" da humanidade em relação a esses eventos traumáticos.
-        </p>
+    <div
+      className="relative min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url('/images/nebulosa.jpg')`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed' }}
+    >
+      {/* Overlay para escurecer o fundo */}
+      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-        <img
-          src="/path/to/your/image.jpg"
-          alt="Imagem relacionada ao tema"
-          className="w-full h-auto rounded-lg shadow-lg mb-6"
-        />
+      {/* Conteúdo principal */}
+      <div className="relative max-w-6xl mx-auto p-10 text-white space-y-16">
+        <section className="text-center">
+          <h1 className="text-6xl font-extrabold mb-6 text-yellow-400">
+            Introdução ao <em>Worlds in Collision</em>
+          </h1>
+          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            <em>Worlds in Collision</em>, publicado em 1950 por Immanuel Velikovsky, é uma obra que desafiou as bases do conhecimento científico de sua época. Velikovsky, que era psiquiatra de formação, dedicou grande parte de sua vida ao estudo das mitologias e das ciências, propondo teorias que causaram grande controvérsia e impacto no mundo acadêmico.
+          </p>
+        </section>
 
-        <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          No entanto, a ciência moderna considera que as leis da física e os registros astronômicos não suportam a ideia de que o planeta Vênus tenha sido um cometa ou que eventos cósmicos dessa magnitude tenham ocorrido nos últimos milhares de anos. Ainda assim, <em>Worlds in Collision</em> permanece como um marco na pseudociência, desafiando as fronteiras do conhecimento estabelecido e inspirando tanto pesquisadores quanto entusiastas a questionar e explorar o desconhecido.
-        </p>
+        {/* Seção Curiosidades */}
+        <section className="text-left max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-yellow-300 mb-4 text-center">Curiosidades sobre o livro</h2>
+          <ul className="list-disc list-inside text-gray-300 mb-6">
+            <li className="mb-2">O livro foi publicado em 1950, mas foi escrito ao longo de uma década de pesquisas intensas, em que Velikovsky estudou textos antigos e dados astronômicos.</li>
+            <li className="mb-2">Uma das ideias centrais do livro é que o planeta Vênus foi inicialmente um cometa antes de estabilizar sua órbita atual.</li>
+            <li className="mb-2">Velikovsky usou registros de diferentes culturas, como a Bíblia e textos chineses antigos, para sugerir que esses eventos cósmicos causaram fenômenos como pragas, terremotos e mudanças climáticas.</li>
+            <li className="mb-2">A obra foi amplamente criticada pela comunidade científica da época, especialmente pelos astrônomos, que consideraram suas ideias incompatíveis com as leis da física.</li>
+          </ul>
+        </section>
 
-       
+        {/* Seção Extra */}
+        <section className="text-left max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 leading-relaxed mb-6">
+            A teoria de Velikovsky também sugere que as civilizações antigas sofreram com uma "amnésia coletiva", onde os povos antigos suprimiram, consciente ou inconscientemente, as memórias desses eventos catastróficos, relembrando-os apenas como mitos e lendas. Ele argumenta que a astronomia e a geologia precisam considerar esses relatos mitológicos como pistas para entender o passado turbulento da Terra.
+          </p>
+
+          <img
+            src="" // Exemplo de uma imagem adicional relacionada
+            alt="Imagem relacionada ao tema"
+            className="w-full h-auto rounded-lg shadow-lg mb-6"
+          />
+
+          <p className="text-xl text-gray-300 leading-relaxed mb-6">
+            Embora amplamente desacreditado pela ciência convencional, <em>Worlds in Collision</em> continua a ser um marco na pseudociência, inspirando tanto curiosidade quanto debates sobre os limites do conhecimento científico e a interpretação de mitos antigos como fatos históricos.
+          </p>
+        </section>
+
+        {/* Botão com ícone de foguete */}
+        <div className="text-center">
+          <Link href="/Artigos" className="inline-flex items-center px-8 py-4 bg-yellow-400 text-black font-bold rounded-md hover:bg-yellow-300 transition duration-300">
+            <FaRocket className="mr-2" /> {/* Ícone de foguete ao lado do texto */}
+            Leia mais artigos
+          </Link>
+        </div>
       </div>
     </div>
   );

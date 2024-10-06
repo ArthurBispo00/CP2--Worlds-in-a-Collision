@@ -48,7 +48,9 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center pt-20">
-      <h1 className="text-5xl font-bold mb-10" aria-label="Linha do Tempo de Velikovsky">Linha do Tempo de Velikovsky</h1>
+      <h1 className="text-5xl font-bold mb-10 text-yellow-400 tracking-wide" aria-label="Linha do Tempo de Velikovsky">
+        Linha do Tempo de Velikovsky
+      </h1>
 
       {/* Linha do Tempo */}
       <section className="w-full max-w-4xl mb-16" aria-labelledby="timeline-heading">
@@ -74,8 +76,8 @@ export default function Home() {
                     className="w-64 h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" 
                   />
                   <div className="max-w-md">
-                    <h2 className="text-3xl font-semibold" id={`event-title-${index}`}>{event.title}</h2>
-                    <p className="text-lg mt-3">{event.description}</p>
+                    <h2 className="text-3xl font-semibold text-yellow-300" id={`event-title-${index}`}>{event.title}</h2>
+                    <p className="text-lg text-gray-300 mt-3">{event.description}</p>
                   </div>
                 </div>
               </article>
@@ -85,11 +87,11 @@ export default function Home() {
       </section>
       
       <button 
-        className="mt-8 text-lg font-bold text-blue-500 underline" 
+        className="mt-8 text-lg font-bold text-yellow-400 underline hover:text-yellow-300 transition duration-300" 
         onClick={() => router.push('/Catastrofes')} // Redireciona para o componente da página Catastrofes
         aria-label="Confira os eventos na linha do tempo"
       >
-        Confira agora como esses fatos se relaciona com o livro sagrado a Biblia.
+        Confira agora como esses fatos se relacionam com o livro sagrado, a Bíblia.
       </button>
     </main>
   );

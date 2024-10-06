@@ -1,115 +1,61 @@
-"use client";
+// Importando a fonte Roboto diretamente do Google Fonts usando next/font/google
+import { Roboto } from 'next/font/google';
+import { FaBook, FaInfoCircle } from 'react-icons/fa'; // Importando ícones do react-icons
 
-import { useEffect, useState } from "react";
+// Configurando Roboto com os pesos e subset necessários
+const roboto = Roboto({
+  weight: ['400', '500', '700'], // Variantes de peso da fonte
+  subsets: ['latin'], // Subconjunto de caracteres
+  display: 'swap', // Para garantir que o texto seja renderizado com fallback enquanto a fonte é carregada
+});
 
-interface PlanetData {
-  url: string;
-  name: string;
-  theory: string;
-  narrative: string; // Nova propriedade para armazenar a narrativa expandida
-}
-
-export default function SistemaSolar() {
-  const [planets, setPlanets] = useState<PlanetData[]>([]);
-  const [selectedPlanetIndex, setSelectedPlanetIndex] = useState<number | null>(null); // Para armazenar o índice do planeta selecionado
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        // Faz uma requisição para a API personalizada
-        const res = await fetch('/api/nasa');
-        if (!res.ok) {
-          throw new Error('Falha ao buscar as imagens');
-        }
-        const data = await res.json();
-
-        // Planetas e suas teorias expandidas com narrativas bíblicas
-        const planetData: PlanetData[] = [
-          { 
-            url: data.images[0], 
-            name: 'Vênus', 
-            theory: 'Velikovsky sugeriu que Vênus foi ejetado de Júpiter e passou próximo à Terra, causando catástrofes.',
-            narrative: 'Velikovsky associou a passagem de Vênus à Terra com os eventos bíblicos das Dez Pragas do Egito. Ele acreditava que a transformação da água em sangue, as pragas de gafanhotos e a escuridão que envolveu o Egito foram causadas pelos efeitos da passagem do cometa que se tornaria Vênus.'
-          },
-          { 
-            url: data.images[1], 
-            name: 'Marte', 
-            theory: 'Velikovsky propôs que Marte interagiu com a Terra em eventos cataclísmicos antigos.',
-            narrative: 'Meio século após o evento de Vênus, Velikovsky afirmou que Marte foi deslocado pela gravidade de Vênus e passou perto da Terra. Durante esse evento, a Bíblia narra que Josué, durante a conquista de Canaã, pediu que o Sol ficasse parado no céu.'
-          },
-          { 
-            url: data.images[2], 
-            name: 'Júpiter', 
-            theory: 'Velikovsky acreditava que Júpiter foi responsável por ejetar Vênus, o que causou uma série de eventos.',
-            narrative: 'De acordo com Velikovsky, Júpiter foi o ponto de origem do cometa que se tornou Vênus. A ejeção de Vênus de Júpiter iniciou uma série de perturbações no Sistema Solar, que culminaram em catástrofes na Terra.'
-          },
-          { 
-            url: data.images[3], 
-            name: 'Saturno', 
-            theory: 'Teorias de Velikovsky sugerem que Saturno teve uma importância significativa em antigos eventos celestiais.',
-            narrative: 'Velikovsky especulou que Saturno teve um papel nas interações gravitacionais que influenciaram os eventos celestes descritos nas mitologias antigas.'
-          },
-          { 
-            url: data.images[4], 
-            name: 'Mercúrio', 
-            theory: 'Velikovsky considerava Mercúrio como envolvido em importantes interações celestes durante a história da Terra.',
-            narrative: 'Velikovsky associava Mercúrio às tradições mitológicas sobre mensageiros dos deuses.'
-          }
-        ];
-
-        setPlanets(planetData);
-        setLoading(false);
-      } catch (error: any) {
-        setError(error.message || 'Erro desconhecido');
-        setLoading(false);
-      }
-    };
-
-    fetchImages();
-  }, []);
-
-  if (loading) {
-    return <div className="flex justify-center items-center h-screen">Carregando...</div>;
-  }
-
-  if (error) {
-    return <div className="text-red-500">{error}</div>;
-  }
-
+export default function Introducao() {
   return (
-    <main className="flex flex-col justify-center items-center text-center pt-20">
-      <h1 className="text-4xl font-bold mb-6">Planetas Teorizados por Velikovsky</h1>
-      <section className="flex flex-col gap-6">
-        {/* Exibe cada imagem retornada pela API */}
-        {planets.map((planet, index) => (
-          <article 
-            key={index} 
-            className="cursor-pointer flex flex-col items-center space-y-4" 
-            onClick={() => setSelectedPlanetIndex(selectedPlanetIndex === index ? null : index)} // Alterna a exibição
-          >
-            <figure className="w-64 h-64 rounded-lg shadow-lg overflow-hidden">
-              <img 
-                src={planet.url} 
-                alt={`Imagem de ${planet.name}`} 
-                className="w-full h-full object-cover" 
-                loading="lazy" 
-              />
-            </figure>
-            <div className="flex flex-col items-center">
-              <h2 className="text-xl font-semibold">{planet.name}</h2>
-              {/* Exibe a teoria e narrativa apenas se o planeta estiver selecionado */}
-              {selectedPlanetIndex === index && (
-                <>
-                  <p className="text-lg text-center mt-2 max-w-md">{planet.theory}</p>
-                  <p className="text-base text-left mt-2 max-w-md">{planet.narrative}</p> {/* Exibe a narrativa completa */}
-                </>
-              )}
-            </div>
-          </article>
-        ))}
-      </section>
-    </main>
+    <div className={`${roboto.className} bg-gradient-to-b from-black via-gray-900 to-black min-h-screen p-8 text-white`}>
+      <div className="max-w-4xl mx-auto bg-gray-800 p-10 rounded-lg shadow-xl">
+        {/* Título principal com ícone e espessura extra nas letras */}
+        <h1 className="text-5xl font-extrabold mb-6 text-yellow-400 flex items-center">
+          <FaBook className="mr-3" /> {/* Ícone do livro antes do título */}
+          Introdução ao <em>Worlds in Collision</em>
+        </h1>
+        
+        <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+          <em>Worlds in Collision</em>, publicado em 1950 por Immanuel Velikovsky, é uma obra que desafiou as bases do conhecimento científico de sua época. Velikovsky, que era psiquiatra de formação, dedicou grande parte de sua vida ao estudo das mitologias e das ciências, propondo teorias que causaram grande controvérsia e impacto no mundo acadêmico.
+        </p>
+        <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+          O livro apresenta a teoria de que eventos cataclísmicos cósmicos, envolvendo o planeta Vênus, moldaram a história do planeta Terra. Segundo Velikovsky, Vênus teria sido expulso de Júpiter e, em sua jornada, passou perigosamente perto da Terra, causando eventos catastróficos descritos em antigas mitologias. Ele argumenta que as histórias mitológicas e religiosas de civilizações como Egito, Grécia e Israel não são meras alegorias, mas relatos históricos de eventos reais.
+        </p>
+        
+        {/* Subtítulo "Curiosidades" com ícone e espessura aumentada */}
+        <h2 className="text-3xl font-bold mb-4 text-yellow-300 flex items-center">
+          <FaInfoCircle className="mr-2" /> {/* Ícone de informação */}
+          Curiosidades sobre o livro
+        </h2>
+        
+        <ul className="list-disc list-inside text-gray-300 mb-6">
+          <li className="mb-2">O livro foi publicado em 1950, após uma década de pesquisa intensa.</li>
+          <li className="mb-2">Velikovsky propôs que o planeta Vênus foi inicialmente um cometa expulso de Júpiter.</li>
+          <li className="mb-2">Ele usou mitologias e textos religiosos de várias culturas para apoiar suas teorias.</li>
+          <li className="mb-2">A obra gerou controvérsia e foi amplamente criticada por astrônomos e cientistas.</li>
+        </ul>
+
+        <img
+          src="/path/to/your/image.jpg"
+          alt="Imagem relacionada ao tema"
+          className="w-full h-auto rounded-lg shadow-lg mb-6"
+        />
+
+        <p className="text-lg text-gray-300 mb-4 leading-relaxed">
+          Embora amplamente desacreditado pela ciência convencional, <em>Worlds in Collision</em> continua a inspirar debates sobre os limites da ciência tradicional e a interpretação de mitos antigos como evidências de eventos históricos.
+        </p>
+
+        {/* Botão corrigido */}
+        <div className="text-center">
+          <a href="/Artigos" className="inline-block px-8 py-4 bg-yellow-400 text-black font-bold rounded-md hover:bg-yellow-300 transition duration-300">
+            Leia mais artigos
+          </a>
+        </div>
+      </div>
+    </div>
   );
 }
