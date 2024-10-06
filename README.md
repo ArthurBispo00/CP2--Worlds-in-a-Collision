@@ -18,7 +18,7 @@
 
 ---
 
-## <a name="grupo"></a>**Grupo:** Velikovsky Researchers!  
+## <a name="grupo"></a>**Grupo:** METAMIND SOLUTION!  
 
 ---
 
