@@ -1,7 +1,6 @@
+import { NextResponse } from 'next/server';
 
-import { NextRequest, NextResponse } from 'next/server';
-
-export async function GET(req: NextRequest): Promise<NextResponse> {
+export async function GET(): Promise<NextResponse> {
   // Array com URLs de várias imagens da NASA
   const imageUrls: string[] = [
     'https://photojournal.jpl.nasa.gov/jpeg/PIA00257.jpg', // Imagem de Júpiter
@@ -14,4 +13,3 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
   // Retorna as URLs das imagens no formato JSON
   return NextResponse.json({ images: imageUrls });
 }
-

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation'; // Hook useRouter para redirecionamento
+import Image from 'next/image'; // Importando o componente Image do Next.js
 
 interface TimelineEvent {
   imageUrl: string;
@@ -70,10 +71,12 @@ export default function Home() {
 
                 {/* Alterna os lados da linha do tempo */}
                 <div className="w-1/2 flex flex-col items-center space-y-4 text-center">
-                  <img 
+                  <Image 
                     src={event.imageUrl} 
                     alt={`Imagem do evento: ${event.title}`} 
-                    className="w-64 h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" 
+                    width={256} // Largura ajustável conforme necessário
+                    height={256} // Altura ajustável conforme necessário
+                    className="object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105" 
                   />
                   <div className="max-w-md">
                     <h2 className="text-3xl font-semibold text-yellow-300" id={`event-title-${index}`}>{event.title}</h2>

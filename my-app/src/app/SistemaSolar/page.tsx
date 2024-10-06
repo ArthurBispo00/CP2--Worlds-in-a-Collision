@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Roboto } from 'next/font/google'; // Importando a fonte Roboto
+import Image from 'next/image'; // Importando o componente Image do Next.js
 
 // Configurando Roboto com os pesos e subset necessários
 const roboto = Roboto({
@@ -67,8 +68,12 @@ export default function SistemaSolar() {
 
         setPlanets(planetData);
         setLoading(false);
-      } catch (error: any) {
-        setError(error.message || 'Erro desconhecido');
+      } catch (error) {
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError('Erro desconhecido');
+        }
         setLoading(false);
       }
     };
@@ -99,9 +104,11 @@ export default function SistemaSolar() {
               onClick={() => setSelectedPlanetIndex(selectedPlanetIndex === index ? null : index)} // Alterna a exibição
             >
               <figure className="w-64 h-64 rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
-                <img 
+                <Image 
                   src={planet.url} 
                   alt={`Imagem de ${planet.name}`} 
+                  width={256} // Especifique a largura correta
+                  height={256} // Especifique a altura correta
                   className="w-full h-full object-cover" 
                   loading="lazy" 
                 />

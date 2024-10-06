@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation'; // Hook useRouter para redirecionamento
+import Image from 'next/image'; // Usar o componente otimizado do Next.js para imagens
 
 interface ImageData {
   url: string;
@@ -25,8 +26,12 @@ export default function CatastrofesPage() {
         const firstImage = data.images[0]; // Obtém a primeira imagem
         setImageData({ url: firstImage });
         setLoading(false);
-      } catch (error: any) {
-        setError(error.message || "Erro desconhecido");
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          setError(error.message || "Erro desconhecido");
+        } else {
+          setError("Erro desconhecido");
+        }
         setLoading(false);
       }
     };
@@ -57,11 +62,12 @@ export default function CatastrofesPage() {
           </h1>
 
           {imageData && (
-            <img
+            <Image
               src={imageData.url}
               alt="Imagem do cometa fornecida pela NASA"
               className="mb-6 mx-auto rounded-lg shadow-lg"
-              style={{ width: '100%', height: 'auto', maxWidth: '600px' }} // Tornando a imagem responsiva
+              width={600}
+              height={400}
               aria-describedby="imagem-descricao"
             />
           )}
@@ -74,7 +80,7 @@ export default function CatastrofesPage() {
               Entre os eventos propostos por Velikovsky, o mais significativo é a associação das Dez Pragas do Egito com essa aproximação de Vênus.
             </p>
             <p className="mb-4">
-              Na página 181 de seu livro, Velikovsky declara: "Debaixo do peso dos argumentos, cheguei à conclusão—acerca da qual já não tenho dúvidas—de que foi o planeta Vênus, quando era ainda um cometa, que causou as catástrofes dos dias do Êxodo".
+              Na página 181 de seu livro, Velikovsky declara: &quot;Debaixo do peso dos argumentos, cheguei à conclusão—acerca da qual já não tenho dúvidas—de que foi o planeta Vênus, quando era ainda um cometa, que causou as catástrofes dos dias do Êxodo&quot;.
             </p>
             <p>
               Ele sugere que a interação entre os gases quentes de Vênus e a atmosfera terrestre teria provocado os fenômenos descritos na Bíblia como pragas.

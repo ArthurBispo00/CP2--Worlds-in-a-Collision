@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from 'next/image'; // Importando o componente Image do Next.js
 
 // Definindo a interface para os dados da imagem da NASA
 interface NasaImageData {
@@ -26,8 +27,12 @@ export default function NasaImages() {
         const data: NasaImageData = await res.json(); // Tipagem explícita
         setImageData(data);
         setLoading(false);
-      } catch (error: any) {
-        setError(`Erro ao buscar a imagem da NASA: ${error.message}`);
+      } catch (error) {
+        if (error instanceof Error) {
+          setError(`Erro ao buscar a imagem da NASA: ${error.message}`);
+        } else {
+          setError('Erro desconhecido ao buscar a imagem da NASA.');
+        }
         setLoading(false);
       }
     };
@@ -50,9 +55,11 @@ export default function NasaImages() {
         <>
           <h2 className="text-xl font-semibold">{imageData.title}</h2>
           <p className="mb-4">{imageData.date}</p>
-          <img
+          <Image
             src={imageData.url}
             alt={`Imagem do dia da NASA: ${imageData.title}`} // Descrição mais detalhada
+            width={800} // Ajuste a largura conforme necessário
+            height={600} // Ajuste a altura conforme necessário
             className="mb-4 w-full h-auto max-w-lg rounded"
           />
           <p className="max-w-3xl mx-auto">{imageData.explanation}</p> {/* Limitar a largura do texto para melhor leitura */}

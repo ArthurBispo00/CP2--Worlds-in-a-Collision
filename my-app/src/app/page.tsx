@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaBook, FaGlobe, FaSun, FaBolt } from 'react-icons/fa';
+import { FaGlobe, FaSun, FaBolt } from 'react-icons/fa';
 import { Roboto } from 'next/font/google';
 
 // Configurando Roboto com os pesos e subset necessários
@@ -105,10 +105,10 @@ export default function Home() {
         <section className="text-center">
           <h2 className="text-4xl font-bold text-yellow-300 mb-4">O que dizem sobre Velikovsky</h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            "Uma leitura fascinante que desafia as fronteiras do conhecimento científico." – New York Times
+            &quot;Uma leitura fascinante que desafia as fronteiras do conhecimento científico.&quot; – New York Times
           </p>
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            "Uma obra controversa, mas impossível de ignorar." – Scientific American
+            &quot;Uma obra controversa, mas impossível de ignorar.&quot; – Scientific American
           </p>
         </section>
       </div>
