@@ -48,31 +48,37 @@ export default function CatastrofesPage() {
   }
 
   return (
-    <div 
-      className="relative min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url('/images/tom.jp')` }} // Aplique o caminho correto da imagem de fundo
-    >
+    <div className="relative min-h-screen bg-black">
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
-      {/* Conteúdo principal */}
       <main className="relative flex flex-col justify-center items-center text-center pt-20 text-white p-6">
+        {/* Conteúdo principal */}
         <article className="max-w-4xl mx-auto">
-          <h1 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wider text-yellow-400">
-            Teoria de Velikovsky: Vênus e as Pragas do Egito
-          </h1>
+          <header>
+            <h1 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-wider text-yellow-400">
+              Teoria de Velikovsky: Vênus e as Pragas do Egito
+            </h1>
+          </header>
 
           {imageData && (
-            <Image
-              src={imageData.url}
-              alt="Imagem do cometa fornecida pela NASA"
-              className="mb-6 mx-auto rounded-lg shadow-lg"
-              width={600}
-              height={400}
-              aria-describedby="imagem-descricao"
-            />
+            <figure className="relative w-full h-0 pb-[66.67%] mb-10 mx-auto rounded-lg shadow-lg">
+              <Image
+                src={imageData.url}
+                alt="Imagem do cometa fornecida pela NASA"
+                className="rounded-lg shadow-lg"
+                fill // Preencher o contêiner com a imagem
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Definir tamanhos para diferentes breakpoints
+                style={{ objectFit: 'contain' }} // Ajuste para garantir que a imagem não seja cortada
+                priority // Adicionar prioridade para melhorar o LCP
+                aria-describedby="imagem-descricao"
+              />
+              <figcaption id="imagem-descricao" className="text-gray-400 mt-2">
+                Imagem fornecida pela NASA de um cometa.
+              </figcaption>
+            </figure>
           )}
 
-          <section id="imagem-descricao" className="text-lg md:text-xl leading-relaxed text-gray-300">
+          <section className="text-lg md:text-xl leading-relaxed text-gray-300">
             <p className="mb-4">
               Segundo Immanuel Velikovsky, no livro <i>Worlds in Collision</i>, Vênus teria sido originalmente um cometa ejetado de Júpiter, que passou perto de vários corpos celestes do Sistema Solar.
             </p>
@@ -88,13 +94,15 @@ export default function CatastrofesPage() {
           </section>
         </article>
 
-        <button 
-  className="bg-gradient-to-r from-blue-900 to-purple-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-500 transition duration-300 ease-in-out transform hover:scale-105 mt-8"
-  onClick={() => router.push('/Linhadotempo')}
-  aria-label="Confira os eventos na linha do tempo"
->
-  Confira os eventos na linha do tempo
-</button>
+        <footer className="mt-8">
+          <button
+            className="bg-gradient-to-r from-blue-900 to-purple-600 text-white font-bold py-2 px-4 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-500 transition duration-300 ease-in-out transform hover:scale-105"
+            onClick={() => router.push('/Linhadotempo')}
+            aria-label="Confira os eventos na linha do tempo"
+          >
+            Confira os eventos na linha do tempo
+          </button>
+        </footer>
       </main>
     </div>
   );
