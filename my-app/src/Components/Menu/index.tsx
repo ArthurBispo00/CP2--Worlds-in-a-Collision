@@ -35,22 +35,23 @@ export default function Menu() {
   }, []);
 
   return (
-<nav className="bg-gradient-to-r from-black via-blue-900 to-black p-6 shadow-lg border-b-2 border-yellow-400" style={{ width: '120%', marginLeft: '-1cm'}}>
-
-     
-      <div className="mx-auto flex justify-between items-center w-full"style={{ width: '120%', marginLeft: '3cm'}}>
+    <nav className="bg-gradient-to-r from-black via-blue-900 to-black p-6 shadow-lg border-b-2 border-yellow-400 w-full">
+      <div className="mx-auto flex flex-col items-center justify-center w-full">
         {isMobile && isOpen && (
           <div className="text-white text-lg font-bold">
             Exploração Cósmica
           </div>
         )}
+
+        {/* Botão para abrir o menu em telas menores */}
         <div className="lg:hidden">
           <button onClick={toggleMenu} className="text-white">
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
 
-        <ul className={`lg:flex lg:items-center lg:space-x-8 ${isOpen ? 'block' : 'hidden'} lg:block mt-4 lg:mt-0 w-full`}>
+        {/* Menu centralizado */}
+        <ul className={`lg:flex lg:items-center lg:space-x-8 ${isOpen ? 'block' : 'hidden'} lg:block mt-4 lg:mt-0`}>
           <li className="flex items-center space-x-2">
             <FaMeteor className="text-yellow-400 animate-pulse" />
             <Link href="/" className="text-white hover:text-yellow-400 text-lg transition duration-300 ease-in-out">
@@ -91,12 +92,6 @@ export default function Menu() {
             <FaSun className="text-yellow-300 animate-spin-slow" />
             <Link href="SistemaSolar" className="text-white hover:text-yellow-400 text-lg transition duration-300 ease-in-out">
               Sistema Solar
-            </Link>
-          </li>
-          <li className="flex items-center space-x-2">
-            <FaSun className="text-yellow-300 animate-spin-slow" />
-            <Link href="PensamentosVelikovsy" className="text-white hover:text-yellow-400 text-lg transition duration-300 ease-in-out">
-            PensamentosVelikovsy
             </Link>
           </li>
         </ul>

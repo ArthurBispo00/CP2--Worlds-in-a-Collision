@@ -7,7 +7,8 @@ export async function GET(): Promise<NextResponse> {
     'https://photojournal.jpl.nasa.gov/jpeg/PIA02982.jpg', // Marte
     'https://photojournal.jpl.nasa.gov/jpeg/PIA00123.jpg', // Vênus
     'https://photojournal.jpl.nasa.gov/jpeg/PIA01988.jpg', // Saturno
-    'https://photojournal.jpl.nasa.gov/jpeg/PIA00331.jpg'  // Mercúrio
+    'https://photojournal.jpl.nasa.gov/jpeg/PIA00331.jpg', // Mercúrio
+    'https://photojournal.jpl.nasa.gov/jpeg/PIA03031.jpg'  // Imagem para "Pensamentos"
   ];
 
   // Retorna as URLs das imagens em formato JSON
