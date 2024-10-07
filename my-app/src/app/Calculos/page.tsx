@@ -142,7 +142,7 @@ export default function CatastrofesPage() {
         </section>
 
         {/* Alterando a tag <a> para um botão estilizado */}
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8 mb-16"> {/* Adiciona margem inferior ao botão */}
           <button 
             className="bg-gradient-to-r from-blue-900 to-purple-600 text-white font-bold py-2 px-6 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-500 transition duration-300 ease-in-out transform hover:scale-105"
             onClick={() => router.push('/Linhadotempo')}
@@ -155,4 +155,3 @@ export default function CatastrofesPage() {
     </main>
   );
 }
-
